@@ -1,0 +1,67 @@
+﻿@{
+    var action = ViewContext.RouteData.GetRequiredString("action").ToLower();
+}
+
+<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav side-nav">
+        <li class="@(action == "index"? "active" : null)">
+            <a href="@Url.Action("Index", "Home")"><i class="fa fa-fw fa-navicon"></i>Dashboard</a>
+        </li>
+        <li class="@(action.Contains("crm") ? "active" : null)">
+            <a href="@Url.Action("Crm", "Home")">
+                <i class="fa fa-fw fa-comments"></i>CRM
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://action.vsecorp.com/BusinessManagement/Application/Desktop.aspx?Module=OpTrack">
+                <i class="fa fa-fw fa-desktop"></i>Optrack
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://action.vsecorp.com/BusinessManagement/Application/Desktop.aspx?Module=Contracts">
+                <i class="fa fa-fw fa-money"></i>Contracts
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://action.vsecorp.com/BusinessManagement/Application/Desktop.aspx?Module=Markets_And_Offerings">
+                <i class="fa fa-fw fa-bar-chart-o"></i>MCO
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-wrench"></i>Admin Tools <i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="demo" class="collapse">
+                <li>
+                    <a href="#">Support Tickets</a>
+                </li>
+                <li>
+                    <a href="#">Suggestions</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;" data-toggle="collapse" data-target="#samples"><i class="fa fa-fw fa-file-text"></i>Samples <i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="samples" class="collapse">
+                <li>
+                    <a href="~/Sample/index.html">Index</a>
+                </li>
+                <li>
+                    <a href="~/Sample/tables.html">Charts</a>
+                </li>
+                <li>
+                    <a href="~/Sample/tables.html">Tables</a>
+                </li>
+                <li>
+                    <a href="~/Sample/tables.html">Forms</a>
+                </li>
+                <li>
+                    <a href="~/Sample/tables.html">Elements</a>
+                </li>
+                <li>
+                    <a href="~/Sample/tables.html">Grids</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!-- /.navbar-collapse -->

@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Page Heading -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">CRM <small>Customer Relations Management</small>
+        </h1>
+    </div>
+</div>
+
+<!-- /.row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-customBlue">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-comments fa-fw"></i>CRM Activities</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label>Filter record list</label>
+                    @using (Ajax.BeginForm("GetAllActivities", "Home", new AjaxOptions
+                    {
+                        UpdateTargetId = "activityList"
+                    }))
+                    {
+                        <input id="searchBox" name="searchBox" class="form-control" placeholder="Enter search text here"/>
+                    }
+                    <p id="searchNote" class="help-block">Use '-OR-' to indicate different search parameters and '-AND-' for different sections</p>
+                </div>
+                <div id="activityList" class="table-responsive">
+                    @{ Html.RenderAction("GetAllActivities", "Home"); }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.row -->
