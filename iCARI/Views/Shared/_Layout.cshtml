@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "VSEPortal";
+    ViewBag.Title = "iCARI";
 }
 
 <!DOCTYPE html>
@@ -21,8 +21,8 @@
     <!-- Custom CSS -->
     <link href="@Url.Content(@"~/Content/sb-admin.css")" rel="stylesheet">
 
-    <!-- VSEPortal CSS -->
-    <link href="@Url.Content(@"~/Content/vseportal.css")" rel="stylesheet">
+    <!-- iCARI CSS -->
+    <link href="@Url.Content(@"~/Content/iCARI.css")" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
     <link href="@Url.Content(@"~/Content/plugins/morris.css")" rel="stylesheet">
@@ -56,59 +56,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a id="vseLogo" class="navbar-brand" href="@Url.Action("Index", "Home")">VSE<span style="color: #428bca">Portal</span></a>
+                <a id="vseLogo" class="navbar-brand" href="@Url.Action("Index", "Home")">iCARI<span style="color: #428bca"> Data Wallet</span></a>
             </div>
             <div class="top-nav notification-row">                
                 <!-- Top Menu Items -->
                 <ul class="nav navbar-right top-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-envelope"></i>
-                            <span class="badge bg-success">12</span>
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu message-dropdown" style="width: 400px">
-                            <li class="message-preview" style="width: 400px">
-                                <a href="#">
-                                    <div class="media">                                        
-                                        <div class="media-body">
-                                            <h5 class="media-heading"><strong>CRM</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i>Yesterday at 11:15 AM</p>
-                                            <p>Activity "Ft. Benning Lead" was saved</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="message-preview" style="width: 400px">
-                                <a href="#">
-                                    <div class="media">
-                                        <div class="media-body">
-                                            <h5 class="media-heading"><strong>CRM</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i>Yesterday at 4:32 PM</p>
-                                            <p>Keyword "LEAD" Alert for CRM Activity</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="message-preview" style="width: 400px">
-                                <a href="#">
-                                    <div class="media">
-                                        <div class="media-body">
-                                            <h5 class="media-heading"><strong>SQL Server</strong>
-                                            </h5>
-                                            <p class="small text-muted"><i class="fa fa-clock-o"></i>July 15 at 2:32 PM</p>
-                                            <p>SQL Server Job Errors</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="message-footer">
-                                <a href="#">Read All New Messages</a>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">                        
                             <i class="fa fa-bell"></i>
@@ -135,9 +87,6 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>

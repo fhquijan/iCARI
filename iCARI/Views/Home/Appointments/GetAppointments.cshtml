@@ -1,0 +1,46 @@
+﻿@using iCARI.Models
+@using PagedList.Mvc; 
+
+@model PagedList.IPagedList<Activity>
+
+@if (Model.Any())
+{
+    <table class="table table-bordered table-hover table-striped listTable">
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Contacts</th>
+                <th>Activity Date</th>
+                <th>Location</th>
+                <th>Activity Type</th>
+                <th>Created By</th>
+                <th>Group Created</th>
+                <th>Created Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var trx in Model)
+            {
+                <tr onclick="location.href = '@(Url.Action("CrmRecord", "Home", new { id = trx.RecordId }))'">
+                    <td>@trx.Subject</td>
+                    <td>@trx.Contact</td>
+                    <td>@trx.ActivityDate.ToString("MM/dd/yyyy")</td>
+                    <td>@trx.Location</td>
+                    <td>@trx.ActivityType</td>
+                    <td>@trx.CreatedBy</td>
+                    <td>@trx.GroupCreated</td>
+                    <td>@trx.CreatedDate.ToString("MM/dd/yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <span>NO ACTIVITIES</span>
+}
+@if (Model.PageCount > 1)
+{
+    @Html.PagedListPager(Model, page => Url.Action("Crm", new {page}))
+}
+   

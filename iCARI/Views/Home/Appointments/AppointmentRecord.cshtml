@@ -1,0 +1,132 @@
+﻿@model iCARI.Models.Activity
+
+@{
+    ViewBag.Title = "CRM Record";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model != null)
+{
+    <div class="margin-top15">
+        @Html.ActionLink("Edit Record", "CrmEdit", "Home", new { id = Model.RecordId }, new { @class = "btn btn-default" })
+        @Html.ActionLink("Back to List", "Crm", "Home", null, new { @class = "btn btn-default" })
+    </div>
+    <h2>CRM Activity Record</h2>
+    <div class="panel panel-customBlue">
+        <div class="panel-heading">
+            <h3 class="panel-title">Activity Id: @Html.DisplayFor(model => model.RecordId)</h3>
+        </div>
+        <div class="panel-body">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreatedBy)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedBy)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Subject)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Subject)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ActivityDate)
+                </dt>
+                <dd>
+                    @Model.ActivityDate.ToShortDateString()
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Contact)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Contact)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ActivityType)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ActivityType)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Location)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Location)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.GroupCreated)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.GroupCreated)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreatedDate)
+                </dt>
+                <dd>
+                    @Model.CreatedDate.ToShortDateString()
+                </dd>
+            </dl>
+            <div class="table-responsive" style="margin-top: 10px">
+                <table class="table table-bordered table-hover table-striped childTable">
+                    <thead>
+                        <tr>
+                            <th>Alerted Staff</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Anakin Skywalker</td>
+                        </tr>
+                        <tr>
+                            <td>Luke "Daddy Issues" Skywalker</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="panel panel-customBlue">
+                <div class="panel-heading">
+                    <h3 class="panel-title">@Html.DisplayNameFor(model => model.Notes)</h3>
+                </div>
+                <div class="panel-body">
+                    @Html.DisplayFor(model => model.Notes)
+                    <div id="staffNotesTables" class="table-responsive">
+                        <table class="table table-bordered table-hover table-striped childTable">
+                            <thead>
+                                <tr>
+                                    <th>Staff Notes</th>
+                                    <th>Created By</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Something Darkside</td>
+                                    <td>Anakin Skywalker</td>
+                                </tr>
+                                <tr>
+                                    <td>Dad wut?</td>
+                                    <td>Luke "Daddy Issues" Skywalker</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>
+        @Html.ActionLink("Edit Record", "CrmEdit", "Home", new { id = Model.RecordId }, new { @class = "btn btn-default" })
+        @Html.ActionLink("Back to List", "Crm", "Home", null, new { @class = "btn btn-default" })
+    </p>    
+}
+else
+{
+    <span>NO RECORD FOUND</span>
+}

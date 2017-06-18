@@ -1,0 +1,135 @@
+﻿@model iCARI.Models.Activity
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-10 margin-top15">
+                @Html.ActionLink("Cancel", "CrmRecord", "Home", new { id = Model.RecordId }, new { @class="btn btn-default"})
+                @Html.ActionLink("Save", "CrmRecord", "Home", new { id = Model.RecordId }, new { @class="btn btn-default"})
+            </div>
+        </div>        
+        <h2>CRM Activity Record</h2>
+        <div class="panel panel-customBlue">
+            <div class="panel-heading">
+                <h3 class="panel-title">Activity Id: @Html.DisplayFor(model => model.RecordId)</h3>
+            </div>
+            <div class="panel-body">
+                @Html.ValidationSummary(true)
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CreatedBy, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CreatedBy)
+                        @Html.ValidationMessageFor(model => model.CreatedBy)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Subject, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Subject)
+                        @Html.ValidationMessageFor(model => model.Subject)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ActivityDate, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.ActivityDate)
+                        @Html.ValidationMessageFor(model => model.ActivityDate)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Contact, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Contact)
+                        @Html.ValidationMessageFor(model => model.Contact)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ActivityType, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.ActivityType)
+                        @Html.ValidationMessageFor(model => model.ActivityType)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Location, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Location)
+                        @Html.ValidationMessageFor(model => model.Location)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.GroupCreated, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.GroupCreated)
+                        @Html.ValidationMessageFor(model => model.GroupCreated)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CreatedDate, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CreatedDate)
+                        @Html.ValidationMessageFor(model => model.CreatedDate)
+                    </div>
+                </div>
+                <div class="table-responsive" style="margin-top: 10px">
+                    <table class="table table-bordered table-hover table-striped childTable">
+                        <thead>
+                            <tr>
+                                <th>Alerted Staff</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Anakin Skywalker</td>
+                            </tr>
+                            <tr>
+                                <td>Luke "Daddy Issues" Skywalker</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel panel-customBlue">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">@Html.DisplayNameFor(model => model.Notes)</h3>
+                    </div>
+                    <div class="panel-body">
+                        @Html.DisplayFor(model => model.Notes)
+                        <div id="staffNotesTables" class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped childTable">
+                                <thead>
+                                    <tr>
+                                        <th>Staff Notes</th>
+                                        <th>Created By</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Something Darkside</td>
+                                        <td>Anakin Skywalker</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dad wut?</td>
+                                        <td>Luke "Daddy Issues" Skywalker</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.ActionLink("Cancel", "CrmRecord", "Home", new { id = Model.RecordId }, new { @class="btn btn-default"})
+                @Html.ActionLink("Save", "CrmRecord", "Home", new { id = Model.RecordId }, new { @class="btn btn-default"})
+            </div>
+        </div>     
+    </div>
+}

@@ -8,24 +8,44 @@
         <li class="@(action == "index"? "active" : null)">
             <a href="@Url.Action("Index", "Home")"><i class="fa fa-fw fa-navicon"></i>Dashboard</a>
         </li>
+        <li class="@(action.Contains("appointment") ? "active" : null)">
+            <a href="@Url.Action("Appointments/Appointments", "Home")">
+                <i class="fa fa-fw fa-comments"></i>Appointments
+            </a>
+        </li>
         <li class="@(action.Contains("crm") ? "active" : null)">
             <a href="@Url.Action("Crm", "Home")">
-                <i class="fa fa-fw fa-comments"></i>CRM
+                <i class="fa fa-fw fa-comments"></i>Diagnosis
             </a>
         </li>
-        <li>
-            <a target="_blank" href="https://action.vsecorp.com/BusinessManagement/Application/Desktop.aspx?Module=OpTrack">
-                <i class="fa fa-fw fa-desktop"></i>Optrack
+        <li class="@(action.Contains("medication") ? "active" : null)">
+            <a href="@Url.Action("Medications", "Home")">
+                <i class="fa fa-fw fa-comments"></i>Medications
             </a>
         </li>
-        <li>
-            <a target="_blank" href="https://action.vsecorp.com/BusinessManagement/Application/Desktop.aspx?Module=Contracts">
-                <i class="fa fa-fw fa-money"></i>Contracts
+        <li class="@(action.Contains("allergies") ? "active" : null)">
+            <a href="@Url.Action("Allergies", "Home")">
+                <i class="fa fa-fw fa-comments"></i>Allergies
             </a>
         </li>
-        <li>
-            <a target="_blank" href="https://action.vsecorp.com/BusinessManagement/Application/Desktop.aspx?Module=Markets_And_Offerings">
-                <i class="fa fa-fw fa-bar-chart-o"></i>MCO
+        <li class="@(action.Contains("labs") ? "active" : null)">
+            <a href="@Url.Action("Labs", "Home")">
+                <i class="fa fa-fw fa-comments"></i>Labs and Radiology
+            </a>
+        </li>
+        <li class="@(action.Contains("vital") ? "active" : null)">
+            <a href="@Url.Action("Vital", "Home")">
+                <i class="fa fa-fw fa-comments"></i>Vital Signs
+            </a>
+        </li>
+        <li class="@(action.Contains("history") ? "active" : null)">
+            <a href="@Url.Action("History", "Home")">
+                <i class="fa fa-fw fa-comments"></i>Family History
+            </a>
+        </li>
+        <li class="@(action.Contains("immune") ? "active" : null)">
+            <a href="@Url.Action("Immunizations", "Home")">
+                <i class="fa fa-fw fa-comments"></i>Immunizations
             </a>
         </li>
         <li>

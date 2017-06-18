@@ -172,7 +172,7 @@
     <Content Include="Content\plugins\metisMenu.min.css" />
     <Content Include="Content\plugins\morris.css" />
     <Content Include="Content\sb-admin.css" />
-    <Content Include="Content\vseportal.css" />
+    <Content Include="Content\iCARI.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Font_Awesome\css\font-awesome.css" />
@@ -326,6 +326,10 @@
     <Content Include="Views\UserLogin\UserLogin.cshtml" />
     <Content Include="Views\Home\CrmRecord.cshtml" />
     <Content Include="Views\Home\CrmEdit.cshtml" />
+    <Content Include="Views\Home\Appointments\AppointmentEdit.cshtml" />
+    <Content Include="Views\Home\Appointments\AppointmentRecord.cshtml" />
+    <Content Include="Views\Home\Appointments\Appointments.cshtml" />
+    <Content Include="Views\Home\Appointments\GetAppointments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
