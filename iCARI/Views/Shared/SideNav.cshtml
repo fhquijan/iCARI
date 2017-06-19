@@ -9,8 +9,8 @@
             <a href="@Url.Action("Index", "Home")"><i class="fa fa-fw fa-navicon"></i>Dashboard</a>
         </li>
         <li class="@(action.Contains("appointment") ? "active" : null)">
-            <a href="@Url.Action("Appointments/Appointments", "Home")">
-                <i class="fa fa-fw fa-comments"></i>Appointments
+            <a href="@Url.Action("Appointments", "Home")">
+                <i class="fa fa-fw fa-user-md"></i>Appointments
             </a>
         </li>
         <li class="@(action.Contains("crm") ? "active" : null)">
@@ -20,7 +20,7 @@
         </li>
         <li class="@(action.Contains("medication") ? "active" : null)">
             <a href="@Url.Action("Medications", "Home")">
-                <i class="fa fa-fw fa-comments"></i>Medications
+                <i class="fa fa-fw fa-medkit"></i>Medications
             </a>
         </li>
         <li class="@(action.Contains("allergies") ? "active" : null)">
@@ -30,22 +30,22 @@
         </li>
         <li class="@(action.Contains("labs") ? "active" : null)">
             <a href="@Url.Action("Labs", "Home")">
-                <i class="fa fa-fw fa-comments"></i>Labs and Radiology
+                <i class="fa fa-fw fa-flask"></i>Labs and Radiology
             </a>
         </li>
         <li class="@(action.Contains("vital") ? "active" : null)">
             <a href="@Url.Action("Vital", "Home")">
-                <i class="fa fa-fw fa-comments"></i>Vital Signs
+                <i class="fa fa-fw fa-heartbeat"></i>Vital Signs
             </a>
         </li>
         <li class="@(action.Contains("history") ? "active" : null)">
             <a href="@Url.Action("History", "Home")">
-                <i class="fa fa-fw fa-comments"></i>Family History
+                <i class="fa fa-fw fa-history"></i>Family History
             </a>
         </li>
         <li class="@(action.Contains("immune") ? "active" : null)">
             <a href="@Url.Action("Immunizations", "Home")">
-                <i class="fa fa-fw fa-comments"></i>Immunizations
+                <i class="fa fa-fw fa-ambulance"></i>Immunizations
             </a>
         </li>
         <li>

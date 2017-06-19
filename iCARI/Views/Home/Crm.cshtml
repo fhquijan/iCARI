@@ -5,7 +5,8 @@
 <!-- Page Heading -->
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">CRM <small>Customer Relations Management</small>
+        <h1 class="page-header">
+            CRM <small>Customer Relations Management</small>
         </h1>
     </div>
 </div>
@@ -21,12 +22,12 @@
             <div class="panel-body">
                 <div class="form-group">
                     <label>Filter record list</label>
-                    @using (Ajax.BeginForm("GetAllActivities", "Home", new AjaxOptions
+                    @using (Ajax.BeginForm("GetAllActivities", "Home", new AjaxOptions
                     {
-                        UpdateTargetId = "activityList"
+                        UpdateTargetId = "activityList"
                     }))
                     {
-                        <input id="searchBox" name="searchBox" class="form-control" placeholder="Enter search text here"/>
+                        <input id="searchBox" name="searchBox" class="form-control" placeholder="Enter search text here" />
                     }
                     <p id="searchNote" class="help-block">Use '-OR-' to indicate different search parameters and '-AND-' for different sections</p>
                 </div>
