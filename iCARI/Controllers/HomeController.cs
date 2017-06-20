@@ -36,6 +36,7 @@ namespace iCARI.Controllers
 
         public ActionResult Appointments()
         {
+            //return View();
             return View("~/Views/Home/Appointments/Appointments.cshtml");
         }
 
@@ -100,7 +101,7 @@ namespace iCARI.Controllers
             int pageSize = 5;
             int pageNumber = (page ?? 1);
 
-            return View("GetAppointments", model.ToPagedList(pageNumber, pageSize));
+            return View("~/Views/Home/Appointments/GetAppointments.cshtml", model.ToPagedList(pageNumber, pageSize));
         }
 
         public ActionResult GetAllAppointments(int? page, string searchBox = "")
@@ -136,7 +137,7 @@ namespace iCARI.Controllers
             int pageSize = 10;
             int pageNumber = (page ?? 1);
 
-            return PartialView("GetAppointments", model.ToPagedList(pageNumber, pageSize));
+            return PartialView("~/Views/Home/Appointments/GetAppointments.cshtml", model.ToPagedList(pageNumber, pageSize));
         }
 
         public DataTable GetFilteredTable(List<Activity> activityList, string searchText)

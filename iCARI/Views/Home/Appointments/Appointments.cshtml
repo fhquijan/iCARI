@@ -20,9 +20,9 @@
             </div>
             <div class="panel-body">
                 <div class="form-group">
-                    <label>Filter record list</label>1
-                    @using(Ajax.BeginForm("GetAllAppointments","Home",newAjaxOptions {
-                        UpdateTargetId = "appointmentsList";
+                    <label>Filter record list</label>
+                    @using(Ajax.BeginForm("GetAllAppointments","Home", new AjaxOptions {
+                        UpdateTargetId = "appointmentsList"
                     }))
                     {
                         <input id="searchBox" name="searchBox" class="form-control" placeholder="Enter search text here"/>

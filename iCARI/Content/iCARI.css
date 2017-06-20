@@ -1,7 +1,7 @@
 /* iCARI */
 @media(max-width:992px) {
     .login-body{
-        background: url('../Images/4.jpg') no-repeat center center fixed;
+        background: url('../Images/6.jpg') no-repeat center center fixed;
         -webkit-background-size: 100% 100%;
         -moz-background-size: 100% 100%;
         -o-background-size: 100% 100%;
@@ -13,7 +13,7 @@
 
 @media(min-width:992px) {
     .login-body{
-        background: url('../Images/4.jpg') no-repeat center center fixed;
+        background: url('../Images/6.jpg') no-repeat center center fixed;
         -webkit-background-size: 100% 100%;
         -moz-background-size: 100% 100%;
         -o-background-size: 100% 100%;
@@ -24,7 +24,7 @@
 
 .gridheading {
     color: #ffffff;
-    background-color: #51657f;
+    background-color: #712b21;
     border-color: #ddd;
 }
 
@@ -53,15 +53,15 @@
 }
 
 body {
-    background-color: #1a2732;
+    background-color: #410c04;
 }
 
 .listTable > thead {
-    background-color: #ededed;
+    background-color: #f0f0f0;
 }
 
 .childTable > thead {
-    background-color: #ededed;
+    background-color: #f0f0f0;
 }
 
     .childTable > thead > tr > th:first-child,
@@ -75,13 +75,13 @@ body {
 
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:focus {
-    color: #1a2732;
-    background-color: #ededed;
+    color: #410c04;
+    background-color: #f0f0f0;
 }
 
 .navbar-inverse {
-    background-color: #1a2732;
-    border-color: #1a2732;
+    background-color: #410c04;
+    border-color: #410c04;
 }
 
 i {
@@ -89,19 +89,19 @@ i {
 }
 
 .side-nav {
-    background-color: #1a2732;
+    background-color: #410c04;
 }
 
     .side-nav li a:hover,
     .side-nav li a:focus {
-        color: #1a2732 !important;
-        background-color: #ededed !important;
+        color: #410c04 !important;
+        background-color: #f0f0f0 !important;
     }
 
     .side-nav li:not(.active) a:hover,
     .side-nav li:not(.active) a:focus {
         color: #ffffff !important;
-        background-color: #394a59 !important;
+        background-color: #dd6b5b !important;
     }
 
 .top-nav > li > a:hover,
@@ -110,12 +110,12 @@ i {
 .top-nav > .open > a:hover,
 .top-nav > .open > a:focus {
     color: #ffffff !important;
-    background-color: #394a59 !important;
+    background-color: #dd6b5b !important;
 }
 
 .pagination > li > a,
 .pagination > li > span {
-    color: #51657f;
+    color: #712b21;
 }
 
 /*badge*/
@@ -163,7 +163,7 @@ i {
 
 /* OVERRIDE BOOTSTRAP */
 a {
-    color: #51657f;
+    color: #712b21;
     text-decoration: none;
 }
 
@@ -172,18 +172,18 @@ a {
 }
 
 .table-hover > tbody > tr:hover > td {
-    background-color: #86c3dd;
-    border-color: #86c3dd;
+    background-color: #dd6b5b;
+    border-color: #dd6b5b;
     cursor: pointer;
 }
 
 /*.panel-primary {
-  border-color: #51657f;
+  border-color: #712b21;
 }
 
 .panel-primary > .panel-heading {
-  background-color: #51657f;
-  border-color: #51657f;
+  background-color: #712b21;
+  border-color: #712b21;
 }*/
 
 .navbar-brand {
@@ -209,38 +209,38 @@ a {
 
     .panel-default > .panel-heading {
         color: #ffffff;
-        background-color: #51657f;
+        background-color: #712b21;
         border-color: #ddd;
     }
 
 .panel-customBlue {
-    border-color: #51657f;
+    border-color: #712b21;
 }
 
     .panel-customBlue > .panel-heading {
         color: #fff;
-        background-color: #51657f;
-        border-color: #51657f;
+        background-color: #712b21;
+        border-color: #712b21;
     }
 
         .panel-customBlue > .panel-heading + .panel-collapse > .panel-body {
-            border-top-color: #51657f;
+            border-top-color: #712b21;
         }
 
         .panel-customBlue > .panel-heading .badge {
-            color: #51657f;
+            color: #712b21;
             background-color: #fff;
         }
 
     .panel-customBlue > .panel-footer + .panel-collapse > .panel-body {
-        border-bottom-color: #51657f;
+        border-bottom-color: #712b21;
     }
 
 .breadcrumb {
     padding: 8px 15px;
     margin-bottom: 20px;
     list-style: none;
-    background-color: #51657f;
+    background-color: #712b21;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
@@ -269,5 +269,5 @@ a {
 }*/
 
 #page-wrapper {
-    background-color: #ededed;
+    background-color: #f0f0f0;
 }
