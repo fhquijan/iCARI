@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -34,10 +35,10 @@ namespace iCARI.Controllers
             return View();
         }
 
-        public ActionResult Appointments()
+        public ActionResult Appointment()
         {
-            //return View();
-            return View("~/Views/Home/Appointments/Appointments.cshtml");
+
+            return View();
         }
 
         public ActionResult UserLogin()

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cbf72b3c1a114ba6bd7820c392b27c58" Name="Diagram1" ZoomLevel="126">
+        <EntityTypeShape EntityType="iCARIModel.Allergy" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iCARIModel.Appointment" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="iCARIModel.Diagnosi" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iCARIModel.Doctor" Width="1.5" PointX="3.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iCARIModel.FamilyHistory" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="iCARIModel.Immunization" Width="1.5" PointX="6" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iCARIModel.Lab" Width="1.5" PointX="3" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="iCARIModel.LabAttachment" Width="1.5" PointX="5.25" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iCARIModel.Medication" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iCARIModel.User" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iCARIModel.Vital" Width="1.5" PointX="3" PointY="24.5" IsExpanded="true" />
+        <AssociationConnector Association="iCARIModel.FK_Allergy_User" ManuallyRouted="false" />
+        <AssociationConnector Association="iCARIModel.FK_Appointment_User" ManuallyRouted="false" />
+        <AssociationConnector Association="iCARIModel.FK_Diagnosis_User" ManuallyRouted="false" />
+        <AssociationConnector Association="iCARIModel.FK_Immunization_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="iCARIModel.FK_Medication_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="iCARIModel.FK_FamilyHistory_User" ManuallyRouted="false" />
+        <AssociationConnector Association="iCARIModel.FK_Immunization_User" ManuallyRouted="false" />
+        <AssociationConnector Association="iCARIModel.FK_Lab_User" ManuallyRouted="false" />
+        <AssociationConnector Association="iCARIModel.FK_LabAttachment_Lab" ManuallyRouted="false" />
+        <AssociationConnector Association="iCARIModel.FK_Medication_User" ManuallyRouted="false" />
+        <AssociationConnector Association="iCARIModel.FK_Vital_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -9,7 +9,7 @@
             <a href="@Url.Action("Index", "Home")"><i class="fa fa-fw fa-navicon"></i>Dashboard</a>
         </li>
         <li class="@(action.Contains("appointment") ? "active" : null)">
-            <a href="@Url.Action("Appointments", "Home")">
+            <a href="@Url.Action("Index", "Appointment")">
                 <i class="fa fa-fw fa-user-md"></i>Appointments
             </a>
         </li>
@@ -48,9 +48,19 @@
                 <i class="fa fa-fw fa-ambulance"></i>Immunizations
             </a>
         </li>
+        <li class="@(action.Contains("doctor") ? "active" : null)">
+            <a href="@Url.Action("Immunizations", "Home")">
+                <i class="fa fa-fw fa-user-md"></i>Doctors
+            </a>
+        </li>
         <li>
-            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-wrench"></i>Admin Tools <i class="fa fa-fw fa-caret-down"></i></a>
-            <ul id="demo" class="collapse">
+            <a href="javascript:;" data-toggle="collapse" data-target="#adminList"><i class="fa fa-fw fa-wrench"></i>Admin Tools <i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="adminList" class="collapse">
+                <li>
+                    <a href="@Url.Action("Index", "User")">
+                        <i class="fa fa-fw fa-user-circle"></i>Users
+                    </a>
+                </li>
                 <li>
                     <a href="#">Support Tickets</a>
                 </li>
